@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Author Entry</h2>
+
+    <form action="">
+        <label for="Hidden-Author-Name">The Hidden Author Name:</label><br>
+        <input type="password" id="hiddenAuthor" name="authorName" value="Dickens"><br>
+
+        <label for="Author-Guess">Guess The Author</label><br>
+        <input type="text" id="authorGuess" name="authorGuess"><br>
+
+        <input type="button" value="guessCheck" onclick="checkAuthor()"><br>
+        <div id="results"></div>
+        <script>
+            var good = 0;
+            var oops = 0;
+            function checkAuthor() {
+                let authorName = document.getElementById("hiddenAuthor").value;
+
+                let guessedValue = document.getElementById("authorGuess").value;
+
+                if (authorName == guessedValue) {
+                    good++;
+                    alert("You Got It Right");
+                    //console.log("harsha kannaya")
+                }
+                else {
+                    oops++;
+                    alert("Sorry!!!");
+                }
+
+                var resultElement = document.getElementById("results");
+                if (good == 1) {
+                    resultElement.innerHTML = "You Got It Right" + " " + good;
+                }
+                else {
+                    resultElement.innerHTML = "Sorry!!!" + " " + oops;
+                }
+            }
+        </script>
+</body>
+
+</html>
