@@ -2,45 +2,61 @@
 <html>
 
 <body>
-
     <h2>Author Entry</h2>
-
     <form action="">
-        <label for="Hidden-Author-Name">The Hidden Author Name:</label><br>
-        <input type="password" id="hiddenAuthor" name="authorName" value="Dickens"><br>
-
-        <label for="Author-Guess">Guess The Author</label><br>
-        <input type="text" id="authorGuess" name="authorGuess"><br>
-
-        <input type="button" value="guessCheck" onclick="checkAuthor()"><br>
-        <div id="results"></div>
+        <label for="Hidden-Author-Name">The Hidden Author Name:</label><br><br>
+        <input type="password" id="hiddenAuthor" name="authorName" value="Dickens"><br><br>
+        <label for="Author-Guess">Guess The Author</label><br><br>
+        <input type="text" id="authorGuess" name="authorGuess"><br><br>
+        <input type="button" value="guessCheck" onclick="checkAuthor()"><br><br>
+        <div id="results"></div><br><br>
         <script>
             var good = 0;
             var oops = 0;
             function checkAuthor() {
                 let authorName = document.getElementById("hiddenAuthor").value;
-
                 let guessedValue = document.getElementById("authorGuess").value;
-
                 if (authorName == guessedValue) {
                     good++;
                     alert("You Got It Right");
-                    //console.log("harsha kannaya")
                 }
                 else {
-                    oops++;
-                    alert("Sorry!!!");
+                    oops++; alert("Sorry!!!");
                 }
-
                 var resultElement = document.getElementById("results");
                 if (good == 1) {
                     resultElement.innerHTML = "You Got It Right" + " " + good;
-                }
-                else {
+                } else {
                     resultElement.innerHTML = "Sorry!!!" + " " + oops;
                 }
             }
         </script>
+
+        
+        <div class="containner">
+            <img id="cityImage" src="indore.jpg" alt="indore" width="100" height="100" onclick="selectImage()">
+        </div>
+        <script>
+            var useImage = 1;
+            function selectImage() {
+                var image = document.getElementById('cityImage');
+                switch (useImage) {
+                    case 1:
+                        image.src = "kerala.jpg";
+                        useImage = 2;
+                        break;
+                    case 2:
+                        image.src = "aurangabad.jpeg";
+                        useImage = 3;
+                        break;
+                    case 3:
+                        image.src = "indore.jpg";
+                        useImage = 1;
+                        break;
+                }
+            }
+        </script>
+        </div>
 </body>
 
 </html>
