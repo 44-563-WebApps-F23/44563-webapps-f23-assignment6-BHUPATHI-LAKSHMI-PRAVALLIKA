@@ -2,3 +2,8 @@
 # WebApps-F23-Assignment-6
 Introduction to Java Script and DOM
 
+hosted at  https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-BHUPATHI-LAKSHMI-PRAVALLIKA/author.html
+
+hosted at https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-BHUPATHI-LAKSHMI-PRAVALLIKA/tips.html
+ 
+hosted at https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-BHUPATHI-LAKSHMI-PRAVALLIKA/cruise.html
